@@ -19,9 +19,10 @@ render() {
   console.log(window.location.hash);
 
   return (
-    <div className="workflow">
-      {window.location.pathname}
-    </div>
+    <h2>bye</h2>
+    // <div className="workflow">
+    //   {window.location.pathname}
+    // </div>
   );
 }
 

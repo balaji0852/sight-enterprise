@@ -64,7 +64,7 @@ class NavMenu extends Component {
                 <div className='appBody'>
                     <div className={this.state.valSideBar
                         ? 'sideBarOpen' : 'sideBar'}>
-                        <Link className='link hoverEffects' to="/Home" >
+                        <Link className='link hoverEffects' to="/" >
                             <div className='sideBarIconsPadding'>
                                 <AiOutlineHome className='navBarIcon' size={30} />
                                 {this.state.valSideBar && "Home"}
@@ -101,3 +101,4 @@ class NavMenu extends Component {
 
 
 export default NavMenu;
+

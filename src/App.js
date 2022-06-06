@@ -1,5 +1,5 @@
 import React,{Component}  from 'react';
-import { Route } from 'react-router';
+import { Route,Switch } from 'react-router';
 import  MainLayout  from './components/MainLayout';
 import  Home  from './components/Pages/Home.js';
 import Setting from './components/Pages/Setting.js';
@@ -13,7 +13,7 @@ class App extends Component {
   render () {
     return (
       <MainLayout>
-        <Route exact path='/Home' component={Home} />
+        <Route exact path='/' component={Home} />
         <Route path='/Classes' component={Setting} />
         <Route path='/add' component={Example} />
         <Route path='/Setting' component={Setting} />
