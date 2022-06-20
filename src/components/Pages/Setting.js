@@ -16,10 +16,9 @@ componentDidMount(){
 }
 
 render() {
-  console.log(window.location.hash);
 
   return (
-    <div className="workflow">
+    <div className="setting">
       test
     </div>
   );
