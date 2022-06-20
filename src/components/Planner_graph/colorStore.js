@@ -7,7 +7,7 @@ class ColorStore extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            colors: ['Red', 'skyblue', 'yellowgreen','purple','green','Red', 'skyblue', 'yellowgreen','purple','green','Red', 'skyblue', 'yellowgreen','purple','green','Red', 'skyblue', 'yellowgreen','purple','green']
+            colors: ['Red', 'purple', 'yellow','blue','green','lightgreen', 'darkblue', 'gold','darkred','blueviolet']
         }
     }
 

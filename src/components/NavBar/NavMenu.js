@@ -4,8 +4,7 @@ import './NavMenu.css';
 import { AiOutlineDeliveredProcedure, AiOutlineMenu, AiOutlineDeploymentUnit, AiOutlineHome, AiOutlineCloudSync } from "react-icons/ai";
 import { FaUserCircle } from 'react-icons/fa';
 import  Breadcrumb  from './BreadCrumb';
-import Workflow from '../Pages/Workflow';
-import Setting from '../Pages/Setting';
+
 
 
 

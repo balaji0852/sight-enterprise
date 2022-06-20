@@ -14,7 +14,7 @@ const BreadCrumb = ()=>{
        }) 
     },[history]) 
  
-    return <div className='BreadCrumb'><Link >-{path}</Link></div>;
+    return <div className='BreadCrumb'><Link >{path}</Link></div>;
 }
 
 
