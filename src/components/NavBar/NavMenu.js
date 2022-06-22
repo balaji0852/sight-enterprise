@@ -15,13 +15,13 @@ class NavMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            valSideBar: false,
+            valSideBar: true,
         };
         window.addEventListener('resize', () => {
             console.log('chng');
 
             this.setState({
-                valSideBar: window.screen.width > 810 ? !this.state.valSideBar: false,
+                valSideBar: window.screen.width > 810 && this.state.valSideBar? !this.state.valSideBar: false,
             });
         });
         this.manageSideBarContent = this.manageSideBarContent.bind(this);
