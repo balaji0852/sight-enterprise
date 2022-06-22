@@ -15,13 +15,13 @@ class NavMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            valSideBar: false,
+            valSideBar: true,
         };
         window.addEventListener('resize', () => {
             console.log('chng');
 
             this.setState({
-                valSideBar: window.screen.width > 810 && !this.state.valSideBar? true: false,
+                valSideBar: window.screen.width > 810 && this.state.valSideBar? true: false,
             });
         });
         this.manageSideBarContent = this.manageSideBarContent.bind(this);
@@ -31,12 +31,12 @@ class NavMenu extends Component {
 
 
     manageSideBarContent() {
-        console.log("cdm",window.screen.width > 810 && this.state.valSideBar);
+    
+        this.setState({
+            valSideBar: window.screen.width > 810? !this.state.valSideBar : false
+        });
         console.log(this.state.valSideBar);
 
-        this.setState({
-            valSideBar: window.screen.width > 810 && !this.state.valSideBar? true : false
-        });
     }
 
     componentDidUpdate(){
@@ -52,7 +52,7 @@ class NavMenu extends Component {
                 <div className='nav'>
                     {/* Date : 2/17/2022 adding the burger icon (lol) in navbar */}
                     <AiOutlineMenu className='navBarIcon' size={30} onClick={this.manageSideBarContent} />
-                    <h3>sight</h3>
+                    <h2>planB</h2>
                     <div className="navRight">
                         <FaUserCircle className='icon' size={30} />
                     </div>
