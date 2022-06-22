@@ -59,7 +59,7 @@ export default class Example extends React.Component {
         </FormGroup>
       <FormGroup>
         <Label for="exampleText">Description</Label>
-        <Input  type="textarea" name="text" id="exampleText" sm={2}/>
+        <Input  type="textarea" name="text" id="exampleText" sm={1}/>
       </FormGroup>
       <FormGroup>
         <Button>Add class</Button>

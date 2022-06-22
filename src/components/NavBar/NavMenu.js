@@ -14,24 +14,28 @@ class NavMenu extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            valSideBar: false,
+        };
         window.addEventListener('resize', () => {
+            console.log('chng');
+
             this.setState({
-                valSideBar: window.screen.width <= 810 ? false : true,
-                width: window.screen.width
+                valSideBar: window.screen.width > 810 && !this.state.valSideBar? true: false,
             });
         });
         this.manageSideBarContent = this.manageSideBarContent.bind(this);
-        this.state = {
-            valSideBar: false,
-            width: window.screen.width,
-        };
+        
     }
 
 
 
     manageSideBarContent() {
+        console.log("cdm",window.screen.width > 810 && this.state.valSideBar);
+        console.log(this.state.valSideBar);
+
         this.setState({
-            valSideBar: window.screen.width <= 810 ? false : !this.state.valSideBar
+            valSideBar: window.screen.width > 810 && !this.state.valSideBar? true : false
         });
     }
 

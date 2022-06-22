@@ -11,7 +11,7 @@ class Home extends Component {
         <div>
           <img className='loadingDescriptionImage'
             src={loadingDescription} />
-          <h5 className='d'>add you're task here, and collaborate efficiently with you're team</h5>
+          <h5 className='d'>Add you're task here, and collaborate efficiently along with you're team</h5>
         </div>
           
         {/* <ClassItemComponent title="sight testing and fixes" description="Sight testing phase updates and fix will be updated here, please update for found bugs and communicate for it here..." lastComment='found bug on clicking home page, cant see the breadcrumb for the first time of boot' />
