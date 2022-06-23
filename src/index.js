@@ -11,7 +11,7 @@ const rootElement = document.getElementById('root');
 console.log(baseUrl);
 
 ReactDOM.render(
-  <HashRouter baseUrl="/Home" >
+  <HashRouter  >
     <App />
   </HashRouter>,
   rootElement);

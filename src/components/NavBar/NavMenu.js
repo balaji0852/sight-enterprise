@@ -14,10 +14,10 @@ class NavMenu extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             valSideBar: false,
-            screenWidth : 0
+            screenWidth : 0,
+            currentPage:'home'
         };
 
         window.addEventListener('resize', () => {
@@ -27,6 +27,8 @@ class NavMenu extends Component {
                 valSideBar: this.state.screenWidth > 810? this.state.valSideBar: false
             });
         });
+
+       
 
         // this.manageSideBarContent = this.manageSideBarContent.bind(this);  
     }
@@ -68,33 +70,33 @@ class NavMenu extends Component {
                 <div className='appBody'>
                     <div className={this.state.valSideBar
                         ? 'sideBarOpen' : 'sideBar'}>
-                        <Link className='link hoverEffects' to="/" >
+                        <Link className='link hoverEffects' to="/dashboard/home" >
                             <div className='sideBarIconsPadding'>
                                 <AiOutlineHome className='navBarIcon' size={30} />
                                 {this.state.valSideBar && "Home"}
                             </div>
                         </Link>
-                        <Link className='link' to="/Classes" >
+                        <Link className='link hoverEffects' to="/dashboard/Classes" >
                             <div className='sideBarIconsPadding'>
                                 <AiOutlineDeliveredProcedure className='navBarIcon' size={30} />
                                 {this.state.valSideBar && "Classes"}
                             </div>
                         </Link>
-                        <Link className='link' to="/add" >
+                        <Link className='link hoverEffects' to="/dashboard/add" >
                             <div className='sideBarIconsPadding'>
                                 <AiOutlineCloudSync className='navBarIcon' size={30} />
                                 {this.state.valSideBar && "Add"}
                             </div>
                         </Link>
-                        <Link className='link' to="/Setting" >
-                            <div className='sideBarIconsPadding'>
+                        <Link className='link hoverEffects' to="/dashboard/Setting" >
+                            <div className={this.state.updatePath?'sideBarIconsPadding':'sideBarIconsPadding'}>
                                 <AiOutlineDeploymentUnit className='navBarIcon' size={30} />
                                 {this.state.valSideBar && "Setting"}
                             </div>
                         </Link>
                     </div>
                     <div className={this.state.valSideBar?'body_left_margin_max body':'body_left_margin_min body'}>
-                        <Breadcrumb />
+                        <Breadcrumb updatePath={(value)=>{console.log(value)}}/>
                         {this.props.children}
                     </div>
                 </div>

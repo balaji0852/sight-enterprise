@@ -92,17 +92,25 @@ select {
 .sideBarIconsPadding {
   margin: 10px;
   font-size: medium;
+  border-radius: 4px;
+}
+
+.sideBarIconsPadding:hover{
+  background-color: white;
+}
+
+.sideBarIconsPaddingActive{
+  background-color: skyblue;
 }
 
 .link{
   color: black;
 }
 
-.link:hover {
-  background-color:aliceblue;
+.link:hover{
+  color: darkblue;
   text-decoration: none;
 }
-
 
 
 .body {
@@ -116,6 +124,7 @@ select {
 .body_left_margin_min{
   margin-left: 50px;
 }
+
 
 
 

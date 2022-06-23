@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom'
 import "./BreadCrumb.css"
 
-const BreadCrumb = ()=>{
+const BreadCrumb = (props)=>{
 
     const history = useHistory() 
     const [path, updatePath] = useState();
     useEffect(() => {
        return history.listen((location) => { 
           updatePath(location.pathname);
+          props.updatePath(location.pathname);
           console.log(`You changed the page to: ${location.pathname}`) 
        }) 
     },[history]) 
