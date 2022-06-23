@@ -14,29 +14,30 @@ class NavMenu extends Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
             valSideBar: false,
+            screenWidth : 0
         };
-        window.addEventListener('resize', () => {
-            console.log('chng');
 
+        window.addEventListener('resize', () => {
+            console.log('chng',this.state);
             this.setState({
-                valSideBar: window.screen.width > 810 && this.state.valSideBar? !this.state.valSideBar: false,
+                screenWidth : window.screen.width,
+                valSideBar: this.state.screenWidth > 810? this.state.valSideBar: false
             });
         });
-        this.manageSideBarContent = this.manageSideBarContent.bind(this);
-        
+
+        // this.manageSideBarContent = this.manageSideBarContent.bind(this);  
     }
 
 
 
     manageSideBarContent() {
-    
         this.setState({
             valSideBar: window.screen.width > 810? !this.state.valSideBar : false
         });
-        console.log(this.state.valSideBar);
-
+        console.log("bnd",this.state);
     }
 
     componentDidUpdate(){
@@ -51,7 +52,7 @@ class NavMenu extends Component {
                 {/* Balaji -> changing code from v 1.0 locoflow template  */}
                 <div className='nav'>
                     {/* Date : 2/17/2022 adding the burger icon (lol) in navbar */}
-                    <AiOutlineMenu className='navBarIcon' size={30} onClick={this.manageSideBarContent} />
+                    <AiOutlineMenu className='navBarIcon' size={30} onClick={this.manageSideBarContent.bind(this)} />
                     <h2>planB</h2>
                     <div className="navRight">
                         <FaUserCircle className='icon' size={30} />
