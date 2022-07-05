@@ -1,9 +1,9 @@
-import React from 'react';
-import { Button, FormGroup, Label, Input, Col } from 'reactstrap';
+import { React, Component } from 'react';
+import { Button, FormGroup, Label, Input, Col, Form, Row } from 'reactstrap';
 import './Workflow.css';
 import ColorStore from '../Planner_graph/colorStore';
 
-export default class Example extends React.Component {
+class add extends Component {
 
 
 
@@ -34,36 +34,38 @@ export default class Example extends React.Component {
         <ColorStore onSelected={this.onColorChange} selectedColor={this.state.selectedColor} />
       </FormGroup>
       <FormGroup row>
-          <Label for="exampleSelect" sm={1}>Category</Label>
-          <Col sm={4}>
-            <Input type="select" name="select" id="exampleSelect" >
+        <Label for="exampleSelect" lg={1} sm={1} xs={1} >Category</Label>
+        <Col lg={5} sm={5} xs={8}>
+          <Input type="select" name="select" id="exampleSelect">
+            {/* <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option> */}
+          </Input>
+        </Col>
+      </FormGroup>
+      <FormGroup row>
+        <Label for="exampleSelect" lg={1} sm={1} xs={1}>Sub-Category</Label>
+        <Col lg={5} sm={5} xs={8}>
+          <Input type="select" name="select" id="exampleSelect" >
             {/* <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
             <option>5</option> */}
           </Input>
-          </Col>
-        </FormGroup>
-        <FormGroup row>
-          <Label for="exampleSelect" sm={1}>Sub-Category</Label>
-          <Col sm={4}>
-            <Input type="select" name="select" id="exampleSelect"  >
-            {/* <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option> */}
-          </Input>
-          </Col>
-        </FormGroup>
+        </Col>
+      </FormGroup>
       <FormGroup>
         <Label for="exampleText">Description</Label>
-        <Input  type="textarea" name="text" id="exampleText" sm={1}/>
+        <Input placeholder='Class Description' type="textarea" name="text" id="exampleText" rows="6" />
       </FormGroup>
       <FormGroup>
-        <Button>Add class</Button>
+        <Button color="primary">Add class</Button>
       </FormGroup>
-    </div>;
+    </div >;
   }
 }
+
+export default add;

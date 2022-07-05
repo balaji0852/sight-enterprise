@@ -19,7 +19,8 @@ render() {
 
   return (
     <div className="setting">
-      test
+      <h3>Settings</h3>
+      <h5>Project id - pb1</h5>
     </div>
   );
 }
